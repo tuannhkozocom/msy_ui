@@ -1,0 +1,475 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.wrapper {
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+}
+
+/* Section top */
+.section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 82px 110px;
+}
+.section-top h1.title {
+  font-size: 5rem;
+  /* margin: 0px 127px; */
+  text-align: center;
+  line-height: 50px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title .title-text {
+  font-size: 3.3rem;
+}
+
+.title-line {
+  width: 60px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 37px;
+}
+.title-line::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: #474747;
+}
+.title-line.title-line-text {
+  position: relative;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+}
+.title-line.title-line-text .text {
+  position: absolute;
+  top: 0;
+  margin-top: -10px;
+  background-color: black;
+  z-index: 50;
+  padding: 0px 10px;
+}
+
+.line-full {
+  width: 100%;
+  height: 2px;
+  background-color: #474747;
+}
+
+/* Section-content */
+.slider-custom .slider-item {
+  height: 459px;
+}
+.slider-custom .slider-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slick-dots {
+  margin-top: 30px;
+  position: unset;
+}
+.slick-dots li {
+  margin: 0;
+}
+.slick-dots li.slick-active button {
+  background-color: #FF00FF;
+  width: 15px;
+  height: 15px;
+  border-radius: 90px;
+}
+.slick-dots li button {
+  width: 15px;
+  height: 15px;
+  border-radius: 90px;
+  background-color: white;
+}
+.slick-dots li button:before {
+  content: "";
+}
+.slick-dots li :not(:first-child),
+.slick-dots li :not(:last-child) {
+  margin: 0 15px;
+}
+
+.section-content .price {
+  font-size: 4.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-content .price .title {
+  font-size: 2rem;
+}
+.section-content .price .number {
+  font-size: 11.2rem;
+}
+.section-content .product-variant {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.section-content .product-variant .variant {
+  display: flex;
+  align-items: center;
+}
+.section-content .product-variant .variant .variant-item {
+  margin-top: 30px;
+}
+.section-content .product-variant .variant .variant-item:first-child {
+  margin-right: 49px;
+}
+
+.container-radio {
+  position: relative;
+}
+.container-radio label {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.container-radio label input {
+  display: none;
+}
+.container-radio label input:checked ~ .radio:after {
+  background-color: #FF00FF;
+}
+.container-radio label .radio::after {
+  content: "";
+  width: 25px;
+  display: block;
+  height: 25px;
+  border: 7px solid #4D4D4D;
+  background-color: #4D4D4D;
+  border-radius: 90px;
+  top: 0;
+  left: 0;
+  margin-right: 14px;
+}
+
+/* Section caledar */
+.flatpickr-input {
+  display: none;
+}
+
+.section-calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  font-size: 4.6rem;
+  width: 100%;
+  margin: 118px 0px;
+}
+
+.ui-datepicker {
+  width: 100%;
+  height: 100%;
+  position: unset !important;
+}
+
+.container-btn {
+  padding: 0 14vw;
+  margin-top: 67px;
+}
+.container-btn .btn {
+  display: inline-block;
+  border-radius: 90px;
+  border: 1px solid white;
+  padding: 26px 0px;
+  width: 100%;
+  background-color: #00B9B2;
+  color: white;
+  font-size: 4.4vw;
+}
+
+/* Section description */
+.section-description .description-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-description .description-top .title {
+  font-size: 12rem;
+  font-family: "Bebas Neue", cursive;
+}
+.section-description .description-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 40px;
+}
+.section-description .description-list .description-item .title {
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 27px;
+}
+.section-description .description-list .description-item .content {
+  margin-bottom: 27px;
+}
+.section-description .product-using > p {
+  padding: 0px 40px;
+}
+.section-description .product-using .image {
+  height: 227px;
+  margin: 33px 0px;
+}
+.section-description .product-using .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-description .product-using .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-description .product-using .product .product-name {
+  font-size: 6rem;
+  font-family: "Bebas Neue", cursive;
+  margin-top: 30px;
+}
+.section-description .product-using .product .product-summary {
+  width: 360px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 30px 0px;
+}
+.section-description .product-using .product .product-description {
+  padding: 0px 40px;
+}
+.section-description .product-feature {
+  padding: 0px 40px;
+}
+.section-description .product-feature > p {
+  margin-bottom: 33px;
+}
+
+.section-article {
+  padding: 0px 40px;
+}
+.section-article .article-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.section-article .article-list .artile-item {
+  width: calc(50% - 25px);
+  margin-bottom: 44px;
+}
+.section-article .article-list .artile-item .article-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.section-article .article-list .artile-item:nth-child(odd) {
+  margin-right: 25px;
+}
+.section-article .article-list .artile-item:nth-child(even) {
+  margin-left: 25px;
+}
+.section-article .article-list .artile-item .article-title {
+  font-weight: bold;
+  width: 78%;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin: 22px 0px;
+}
+.section-article .article-list .artile-item .article-content {
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.button-fixed {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.button-fixed button {
+  background-color: red;
+  padding: 50px 20px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.btn-info {
+  background-color: #00B9B2 !important;
+}
+
+.btn-warning {
+  background-color: #E58503 !important;
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.flatpickr-calendar {
+  width: 100%;
+  background-color: transparent;
+  font-family: "Bebas Neue", cursive;
+}
+.flatpickr-calendar .flatpickr-rContainer,
+.flatpickr-calendar .flatpickr-days {
+  width: 100%;
+}
+.flatpickr-calendar .flatpickr-month {
+  height: unset;
+  position: unset;
+  padding: 0;
+  height: 150px;
+  margin: 30px 0px;
+}
+.flatpickr-calendar .flatpickr-month .flatpickr-current-month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white !important;
+  height: unset;
+}
+.flatpickr-calendar .flatpickr-monthDropdown-months {
+  background-color: black !important;
+  font-size: 8rem;
+  text-align: center;
+  padding: 0;
+}
+.flatpickr-calendar .flatpickr-monthDropdown-months option {
+  font-size: 1.6rem;
+}
+.flatpickr-calendar .flatpickr-day {
+  width: 14% !important;
+  -webkit-flex-basis: 14% !important;
+  flex-basis: 14% !important;
+  width: 14% !important;
+  max-width: 14% !important;
+  color: white;
+  font-size: 2.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.flatpickr-calendar .flatpickr-day.selected {
+  background-color: unset !important;
+  border: unset;
+}
+.flatpickr-calendar .flatpickr-day.selected::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background: #FF00FF;
+  border-radius: 90px;
+}
+.flatpickr-calendar .flatpickr-day.today {
+  border: unset;
+}
+.flatpickr-calendar .flatpickr-day.today::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #FF00FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 90px;
+}
+.flatpickr-calendar span.flatpickr-weekday {
+  color: white;
+  background-color: unset;
+  font-size: 2.1rem;
+  font-weight: 400;
+}
+.flatpickr-calendar span.flatpickr-weekday:first-child {
+  color: #600000;
+}
+.flatpickr-calendar span.flatpickr-weekday:last-child {
+  color: #004374;
+}
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled,
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled:hover,
+.flatpickr-calendar .flatpickr-day.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.nextMonthDay,
+.flatpickr-calendar .flatpickr-day.notAllowed,
+.flatpickr-calendar .flatpickr-day.notAllowed.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.notAllowed.nextMonthDay {
+  color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+}
+.flatpickr-calendar .flatpickr-day.selected,
+.flatpickr-calendar .flatpickr-day.startRange,
+.flatpickr-calendar .flatpickr-day.endRange,
+.flatpickr-calendar .flatpickr-day.selected.inRange,
+.flatpickr-calendar .flatpickr-day.startRange.inRange,
+.flatpickr-calendar .flatpickr-day.endRange.inRange,
+.flatpickr-calendar .flatpickr-day.selected:focus,
+.flatpickr-calendar .flatpickr-day.startRange:focus,
+.flatpickr-calendar .flatpickr-day.endRange:focus,
+.flatpickr-calendar .flatpickr-day.selected:hover,
+.flatpickr-calendar .flatpickr-day.startRange:hover,
+.flatpickr-calendar .flatpickr-day.endRange:hover,
+.flatpickr-calendar .flatpickr-day.selected.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.startRange.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.endRange.prevMonthDay,
+.flatpickr-calendar .flatpickr-day.selected.nextMonthDay,
+.flatpickr-calendar .flatpickr-day.startRange.nextMonthDay,
+.flatpickr-calendar .flatpickr-day.endRange.nextMonthDay {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  border-color: #FF00FF;
+}
+.flatpickr-calendar .flatpickr-months {
+  align-items: center;
+}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month {
+  height: unset;
+}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month svg {
+  width: 36px;
+  height: 36px;
+}
+.flatpickr-calendar .flatpickr-months .flatpickr-month {
+  background: unset;
+}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-months .flatpickr-next-month {
+  position: static;
+  color: red !important;
+}
+.flatpickr-calendar .dayContainer {
+  width: 100%;
+  min-width: unset;
+  max-width: unset;
+}
+.flatpickr-calendar .numInputWrapper {
+  font-size: 3.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
