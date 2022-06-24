@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.wrapper {
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+  padding: 82px 0px;
+}
+
+// Section top
+.section-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1.title {
+    font-size: 4.6rem;
+    text-align: center;
+    line-height: 50px;
+  }
+}
+
+.title-line {
+  width: 60px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 37px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background-color: #474747;
+  }
+}
+
+// Section content
+.section-content {
+  .contract-plan {
+    margin: 82px 0px;
+
+    .title {
+      font-size: 3.3rem;
+      text-align: center;
+      margin-bottom: 43px;
+      font-weight: bold;
+    }
+  }
+
+  .link p {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+      color: #00FF00;
+      text-decoration: underline;
+    }
+  }
+
+  .purchase-history {
+    margin: 82px 0px;
+    .title {
+      font-size: 3.3rem;
+      text-align: center;
+      margin-bottom: 43px;
+      font-weight: bold;
+    }
+  }
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  font-size: 2rem;
+
+  >.cell {
+    padding: 22px 40px;
+    border: 1px solid #707070;
+  }
+
+  .cell:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .cell:nth-child(even) {
+    border-right: 0;
+  }
+}
