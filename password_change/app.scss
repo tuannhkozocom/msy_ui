@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.wrapper {
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+}
+
+// Section top
+.section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 82px 110px;
+
+  h1.title {
+    font-size: 5rem;
+    /* margin: 0px 127px; */
+    text-align: center;
+    line-height: 50px;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .title-text {
+    font-size: 3.3rem;
+  }
+}
+
+.title-line {
+  width: 60px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 37px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background-color: #474747;
+  }
+
+  &.title-line-text {
+    position: relative;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+
+    .text {
+      position: absolute;
+      top: 0;
+      margin-top: -10px;
+      background-color: black;
+      z-index: 50;
+      padding: 0px 10px;
+    }
+  }
+}
+
+// section content 
+.section-content {
+  padding: 0px 110px;
+}
+
+.form-group {
+  margin-bottom: 45px;
+
+  label {
+    display: block;
+    margin-bottom: 18px;
+
+    .label-required {
+      color: #FF00FF;
+      margin-left: 45px;
+    }
+  }
+
+  .form-input {
+    font-size: 1.7rem;
+    background-color: #696969;
+    border: 1px solid white;
+    padding: 18px 27px;
+    // display: block;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #908F8F;
+      opacity: 1;
+      /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #908F8F;
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #908F8F;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 90px;
+  border: 1px solid white;
+  padding: 28px 0px;
+  width: 100%;
+  font-size: 4.4vw;
+
+  &.btn-success {
+    background-color: #00B94E;
+    color: white;
+  }
+}
