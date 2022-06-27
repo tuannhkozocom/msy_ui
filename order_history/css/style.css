@@ -10,18 +10,21 @@ html {
   background-color: black;
   color: white;
   font-size: 1.6rem;
-  padding: 82px 0px;
 }
 
-.section-top {
+section {
+  padding: 0px;
+}
+
+.contain-title {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.section-top h1.title {
-  font-size: 4.6rem;
-  text-align: center;
-  line-height: 50px;
+.contain-title .title-main {
+  font-size: 3.3rem;
+  font-weight: bold;
+  margin-top: 80px;
 }
 
 .title-line {
@@ -36,6 +39,32 @@ html {
   position: absolute;
   height: 2px;
   background-color: #474747;
+}
+.title-line.title-line-text {
+  position: relative;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+}
+.title-line.title-line-text .text {
+  position: absolute;
+  top: 0;
+  margin-top: -10px;
+  background-color: black;
+  z-index: 50;
+  padding: 0px 10px;
+}
+
+.section-top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 110px;
+}
+.section-top h1.title {
+  font-size: 4.6rem;
+  text-align: center;
+  line-height: 50px;
 }
 
 .section-content .contract-plan {
@@ -81,6 +110,18 @@ html {
 }
 .table .cell:nth-child(even) {
   border-right: 0;
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 8px;
+  }
+  .section-top {
+    padding: 0 40px;
+  }
+  .table {
+    grid-template-columns: 40% 60%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

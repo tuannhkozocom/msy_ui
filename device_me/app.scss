@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0px;
+}
+
+section {
+  padding: 50px 40px;
+}
+
+.contain-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title-main {
+    font-size: 4.6rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+// Section top
+.section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 110px;
+
+  h1.title-main {
+    font-size: 5rem;
+    line-height: 50px;
+    margin-top: 80px;
+  }
+}
+
+.title-line {
+  width: 60px;
+  margin-top: 30px;
+  margin-bottom: 37px;
+  margin: 30px auto 37px auto;
+  background-color: #474747;
+  height: 2px;
+
+  &.title-line-text {
+    position: relative;
+    width: 220px;
+    display: flex;
+    justify-content: center;
+
+    .text {
+      position: absolute;
+      top: 0;
+      margin-top: -10px;
+      background-color: black;
+      z-index: 50;
+      padding: 0px 10px;
+    }
+  }
+}
+
+.line-full {
+  height: 2px;
+  background-color: #474747;
+  position: relative;
+}
+
+// Section Without buying
+.without-buying {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  .without-buying-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-main {
+      margin-top: 80px;
+    }
+
+    
+  }
+}
+.image-full {
+  margin-left: -40px !important;
+  margin-right: -40px !important;
+}
+
+.container-button {
+  padding: 70px;
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 90px;
+  border: 1px solid white;
+  width: 100%;
+  padding: 28px 0px;
+  font-size: 4.4vw;
+  text-align: center;
+  text-decoration: none;
+
+  &.btn-default {
+    background-color: #696969;
+    color: white;
+  }
+}
+
+// Rental flow
+.rental-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .step-flow {
+    padding: 50px 90px;
+  }
+
+  .step-flow-item {
+    display: flex;
+    padding-bottom: 60px;
+
+    .icon {
+      margin-right: 27px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .vertical-line {
+        content: '';
+        width: 2px;
+        height: calc(100% + 60px);
+        min-height: 60px;
+        margin-bottom: -60px;
+        background-color: #bbb;
+      }
+    }
+
+    .image {
+      width: 132px;
+      height: 132px;
+      padding: 30px;
+      border: 1px solid white;
+      border-radius: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      img {
+        width: unset;
+        height: 100%;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      color: #D8D8D8;
+
+      .title {
+        font-size: 3rem;
+        text-align: left;
+        font-weight: bold;
+        padding-bottom: 30px;
+      }
+
+      .description {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+// Order flow
+.order-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .step-flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    font-family: 'Bebas Neue', cursive;
+
+    .step-title {
+      font-size: 8.8rem;
+    }
+
+    .step-name {
+      font-size: 4.6rem;
+      font-weight: 600;
+    }
+
+    .step-description {
+      margin: 40px 0px;
+    }
+  }
+
+  .image {
+    margin: 60px 0px;
+    display: flex;
+    align-items: stretch;
+
+    .image-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 2rem;
+      margin-left: 10px;
+    }
+  }
+}
+
+.step-flow {
+  padding: 0px 60px;
+}
+
+// Check received & Check-operation
+.check-received,
+.check-operation {
+  .step-flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    .image {
+      margin: 0px 60px;
+    }
+
+    .step-name {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-top: 37px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+// About manage & Precaution
+.about-manage,
+.precaution {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 40px;
+
+  &.about-manage {
+    background-color: #696969;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+// Return method
+.return-method {
+  .step-flow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 65px 80px;
+
+    .image {
+      width: 100%;
+      max-width: 335px;
+    }
+  }
+
+  .step-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .step-desc {
+    font-weight: 500;
+
+    p {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+// Return home
+.return-home {
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .slider-custom {
+    padding: 0px 100px;
+    font-family: 'Bebas Neue', cursive;
+  }
+
+  .slider-item {
+    border: 1px solid white;
+    padding: 25px 60px;
+    margin: 30px 20px;
+
+    .title {
+      font-weight: 500;
+      font-size: 2.7rem;
+      margin: 32px 0px;
+    }
+  }
+}
+
+.slick-dots {
+  position: unset;
+  font-size: 3rem;
+
+  li {
+    width: unset;
+    height: unset;
+  }
+}
+
+// Commit
+.commit {
+  .title-sub {
+    font-size: 2.5rem;
+    max-width: 70%;
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  .product-damaged {
+    padding: 60px 14px;
+    margin-top: 100px;
+    margin-bottom: 45px;
+    background: #171717;
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 35px 0px;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+
+    .content {
+      text-align: left;
+      font-size: 2rem;
+    }
+  }
+
+  .line-full {
+    margin: 0 15px;
+  }
+}
+
+.product-not-well,
+.damaged-detail,
+.product-lost,
+.forget-accessories {
+  padding: 60px 15px;
+
+  p {
+    font-size: 1.8rem;
+    padding: 18px 0px;
+
+    &.title {
+      font-size: 2.5rem;
+      display: block;
+      text-align: left;
+      font-weight: 600;
+      padding-bottom: 35px;
+    }
+  }
+}
+
+.question {
+  border: 1px solid #747474;
+  padding: 60px 15px;
+  margin: 18px 0px;
+}
+
+.question-item {
+  display: flex;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 8px 0px;
+
+  span:first-child {
+    margin-right: 5px;
+  }
+
+  &:last-child {
+    padding-top: 15px;
+  }
+}
+
+.product-lost,
+.forget-accessories {
+  font-size: 2.3rem;
+}
+
+// Hurry
+.hurry {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .image {
+    margin: 47px 0px;
+  }
+
+  .description {
+    font-size: 3rem;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .time {
+    font-size: 2.8rem;
+    color: #ACACAC;
+    margin: 30px 0px;
+  }
+
+  .contain-link {
+    width: 100%;
+    text-align: center;
+    padding: 0px 70px;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+    }
+
+    .description-link {
+      color: #ACACAC;
+      font-size: 1.7rem;
+      margin-top: 22px;
+    }
+  }
+}
+
+// Reponsive
+@media (max-width: 575px) {
+  html {
+    font-size: 8px;
+  }
+
+  .section-top {
+    padding: 0 40px;
+
+    h1.title-main {
+      font-size: 4rem;
+    }
+  }
+
+  .contain-title {
+    .title-main {
+      font-size: 4rem;
+    }
+  }
+
+  section {
+    padding: 30px 20px;
+  }
+
+  .without-buying .without-buying-item .image {
+    margin: 0;
+  }
+
+  .step-flow {
+    padding: 0px;
+  }
+
+  .rental-flow {
+    .step-flow {
+      padding: 50px 0px;
+    }
+
+    .step-flow-item .image {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .return-home {
+    .slider-custom {
+      padding: 0px;
+    }
+
+    .slider-item {
+      margin: 10px;
+    }
+  }
+
+  .about-manage,
+  .precaution {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .return-method .step-flow-item {
+    padding: 40px 0px;
+  }
+
+  .container-button {
+    padding: 40px 0px;
+  }
+
+  .commit {
+    .line-full {
+      margin: 0;
+    }
+  }
+
+  .product-not-well,
+  .damaged-detail,
+  .product-lost,
+  .forget-accessories {
+    padding: 40px 0px;
+  }
+
+  .image-full {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
+
+  .hurry .contain-link {
+    padding: 0px;
+  }
+}

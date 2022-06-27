@@ -6,33 +6,31 @@ html {
   font-size: 10px;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .wrapper {
   background-color: black;
   color: white;
   font-size: 1.6rem;
 }
 
-/* Section top */
-.section-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 82px 110px;
-}
-.section-top h1.title {
-  font-size: 5rem;
-  /* margin: 0px 127px; */
-  text-align: center;
-  line-height: 50px;
+section {
+  padding: 50px 40px;
 }
 
-.title {
+.contain-title {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.title .title-text {
+.contain-title .title-main {
   font-size: 3.3rem;
+  font-weight: bold;
+  margin-top: 80px;
 }
 
 .title-line {
@@ -69,14 +67,22 @@ html {
   background-color: #474747;
 }
 
-/* Section-content */
-.slider-custom .slider-item {
-  height: 459px;
+/* Section top */
+.section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 70px;
 }
-.slider-custom .slider-item img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.section-top h1.title-main {
+  font-size: 5rem;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* Section-content */
+.slider-custom {
+  margin: 0px -40px;
 }
 
 .slick-dots {
@@ -97,9 +103,6 @@ html {
   height: 15px;
   border-radius: 90px;
   background-color: white;
-}
-.slick-dots li button:before {
-  content: "";
 }
 .slick-dots li :not(:first-child),
 .slick-dots li :not(:last-child) {
@@ -124,14 +127,14 @@ html {
   flex-direction: column;
   text-align: center;
 }
-.section-content .product-variant .variant {
+.section-content .variant {
   display: flex;
   align-items: center;
 }
-.section-content .product-variant .variant .variant-item {
+.section-content .variant .variant-item {
   margin-top: 30px;
 }
-.section-content .product-variant .variant .variant-item:first-child {
+.section-content .variant .variant-item:first-child {
   margin-right: 49px;
 }
 
@@ -173,8 +176,9 @@ html {
   align-items: stretch;
   text-align: center;
   font-size: 4.6rem;
+}
+.section-calendar .calendar {
   width: 100%;
-  margin: 118px 0px;
 }
 
 .ui-datepicker {
@@ -184,11 +188,10 @@ html {
 }
 
 .container-btn {
-  padding: 0 14vw;
   margin-top: 67px;
 }
-.container-btn .btn {
-  display: inline-block;
+
+.btn {
   border-radius: 90px;
   border: 1px solid white;
   padding: 26px 0px;
@@ -205,32 +208,31 @@ html {
   align-items: center;
 }
 .section-description .description-top .title {
-  font-size: 12rem;
+  font-size: 16vw;
   font-family: "Bebas Neue", cursive;
 }
 .section-description .description-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 40px;
 }
-.section-description .description-list .description-item .title {
+.section-description .description-item .title {
   text-align: center;
   font-size: 2rem;
   text-decoration: underline;
   margin-bottom: 27px;
 }
-.section-description .description-list .description-item .content {
+.section-description .description-item .content {
   margin-bottom: 27px;
 }
-.section-description .product-using > p {
-  padding: 0px 40px;
+.section-description .product-using {
+  margin: 50px 0px;
 }
-.section-description .product-using .image {
+.section-description .product-using .image-full {
   height: 227px;
-  margin: 33px 0px;
+  margin: 33px -40px;
 }
-.section-description .product-using .image img {
+.section-description .product-using img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -240,57 +242,50 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.section-description .product-using .product .product-name {
+.section-description .product-using .product-name {
   font-size: 6rem;
   font-family: "Bebas Neue", cursive;
   margin-top: 30px;
 }
-.section-description .product-using .product .product-summary {
-  width: 360px;
+.section-description .product-using .product-summary {
   font-size: 2rem;
   font-weight: bold;
   margin: 30px 0px;
 }
-.section-description .product-using .product .product-description {
-  padding: 0px 40px;
-}
 .section-description .product-feature {
-  padding: 0px 40px;
+  padding: 50px 0px;
 }
-.section-description .product-feature > p {
+.section-description .product-feature > p:not(:last-child) {
   margin-bottom: 33px;
 }
 
-.section-article {
-  padding: 0px 40px;
-}
-.section-article .article-list {
+.article-list {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.section-article .article-list .artile-item {
+.article-list .artile-item {
   width: calc(50% - 25px);
   margin-bottom: 44px;
 }
-.section-article .article-list .artile-item .article-thumbnail img {
+.article-list .artile-item .article-thumbnail img {
   width: 100%;
   height: 100%;
 }
-.section-article .article-list .artile-item:nth-child(odd) {
+.article-list .artile-item:nth-child(odd) {
   margin-right: 25px;
 }
-.section-article .article-list .artile-item:nth-child(even) {
+.article-list .artile-item:nth-child(even) {
   margin-left: 25px;
 }
-.section-article .article-list .artile-item .article-title {
+.article-list .artile-item .article-title {
   font-weight: bold;
   width: 78%;
   font-size: 2rem;
   line-height: 2.5rem;
   margin: 22px 0px;
 }
-.section-article .article-list .artile-item .article-content {
+.article-list .artile-item .article-content {
   line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -327,9 +322,10 @@ html {
 }
 
 .flatpickr-calendar {
-  width: 100%;
+  width: fit-content;
   background-color: transparent;
   font-family: "Bebas Neue", cursive;
+  width: 100%;
 }
 .flatpickr-calendar .flatpickr-rContainer,
 .flatpickr-calendar .flatpickr-days {
@@ -351,7 +347,7 @@ html {
 }
 .flatpickr-calendar .flatpickr-monthDropdown-months {
   background-color: black !important;
-  font-size: 8rem;
+  font-size: 10.67vw;
   text-align: center;
   padding: 0;
 }
@@ -470,6 +466,26 @@ html {
 }
 .flatpickr-calendar .numInputWrapper {
   font-size: 3.7rem;
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 8px;
+  }
+  section {
+    padding: 30px 20px;
+  }
+  .section-top {
+    padding: 0 40px;
+  }
+  .image-full {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
+  .slider-custom {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

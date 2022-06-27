@@ -14,11 +14,60 @@ html {
   font-size: 1.6rem;
 }
 
+section {
+  padding: 50px 40px;
+}
+
+.contain-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contain-title .title-main {
+  font-size: 3.3rem;
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+.title-line {
+  width: 60px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 37px;
+}
+.title-line::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: #474747;
+}
+.title-line.title-line-text {
+  position: relative;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+}
+.title-line.title-line-text .text {
+  position: absolute;
+  top: 0;
+  margin-top: -10px;
+  background-color: black;
+  z-index: 50;
+  padding: 0px 10px;
+}
+
+.line-full {
+  width: 100%;
+  height: 2px;
+  background-color: #474747;
+}
+
 .section-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 82px 110px;
+  padding: 0px 110px;
 }
 .section-top h1.title {
   font-size: 5rem;
@@ -62,10 +111,6 @@ html {
   background-color: black;
   z-index: 50;
   padding: 0px 10px;
-}
-
-.section-content {
-  padding: 0px 110px;
 }
 
 .form-group {
@@ -114,6 +159,15 @@ html {
 .btn.btn-success {
   background-color: #00B94E;
   color: white;
+}
+
+@media (min-width: 550px) {
+  .section-top {
+    padding: 0 40px;
+  }
+  section {
+    padding: 30px 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

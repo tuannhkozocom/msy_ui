@@ -6,34 +6,31 @@ html {
   font-size: 10px;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .wrapper {
   background-color: black;
   color: white;
   font-size: 1.6rem;
 }
 
-/* Section top */
-.section-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 82px 110px;
-
-  h1.title {
-    font-size: 5rem;
-    /* margin: 0px 127px; */
-    text-align: center;
-    line-height: 50px;
-  }
+section {
+  padding: 50px 40px;
 }
 
-.title {
+.contain-title {
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  .title-text {
+  .title-main {
     font-size: 3.3rem;
+    font-weight: bold;
+    margin-top: 80px;
   }
 }
 
@@ -74,18 +71,23 @@ html {
   background-color: #474747;
 }
 
+/* Section top */
+.section-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 70px;
+
+  h1.title-main {
+    font-size: 5rem;
+    text-align: center;
+    line-height: 50px;
+  }
+}
+
 /* Section-content */
 .slider-custom {
-
-  .slider-item {
-    height: 459px;
-
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+  margin: 0px -40px;
 }
 
 .slick-dots {
@@ -107,10 +109,6 @@ html {
       height: 15px;
       border-radius: 90px;
       background-color: white;
-    }
-
-    button:before {
-      content: '';
     }
 
     :not(:first-child),
@@ -141,17 +139,17 @@ html {
     align-items: center;
     flex-direction: column;
     text-align: center;
+  }
 
-    .variant {
-      display: flex;
-      align-items: center;
+  .variant {
+    display: flex;
+    align-items: center;
 
-      .variant-item {
-        margin-top: 30px;
+    .variant-item {
+      margin-top: 30px;
 
-        &:first-child {
-          margin-right: 49px;
-        }
+      &:first-child {
+        margin-right: 49px;
       }
     }
   }
@@ -199,8 +197,9 @@ html {
   align-items: stretch;
   text-align: center;
   font-size: 4.6rem;
-  width: 100%;
-  margin: 118px 0px;
+  .calendar {
+    width: 100%;
+  }
 }
 
 .ui-datepicker {
@@ -210,19 +209,17 @@ html {
 }
 
 .container-btn {
-  padding: 0 14vw;
   margin-top: 67px;
+}
 
-  .btn {
-    display: inline-block;
-    border-radius: 90px;
-    border: 1px solid white;
-    padding: 26px 0px;
-    width: 100%;
-    background-color: #00B9B2;
-    color: white;
-    font-size: 4.4vw;
-  }
+.btn {
+  border-radius: 90px;
+  border: 1px solid white;
+  padding: 26px 0px;
+  width: 100%;
+  background-color: #00B9B2;
+  color: white;
+  font-size: 4.4vw;
 }
 
 /* Section description */
@@ -233,7 +230,7 @@ html {
     align-items: center;
 
     .title {
-      font-size: 12rem;
+      font-size: 16vw;
       font-family: 'Bebas Neue', cursive;
     }
   }
@@ -242,112 +239,100 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 40px;
+  }
 
-    .description-item {
-      .title {
-        text-align: center;
-        font-size: 2rem;
-        text-decoration: underline;
-        margin-bottom: 27px;
-      }
+  .description-item {
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      text-decoration: underline;
+      margin-bottom: 27px;
+    }
 
-      .content {
-        margin-bottom: 27px;
-      }
+    .content {
+      margin-bottom: 27px;
     }
   }
 
   .product-using {
-    >p {
-      padding: 0px 40px;
+    margin: 50px 0px;
+
+    .image-full {
+      height: 227px;
+      margin: 33px -40px;
     }
 
-    .image {
-      height: 227px;
-      margin: 33px 0px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .product {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
 
-      .product-name {
-        font-size: 6rem;
-        font-family: 'Bebas Neue', cursive;
-        margin-top: 30px;
-      }
+    .product-name {
+      font-size: 6rem;
+      font-family: 'Bebas Neue', cursive;
+      margin-top: 30px;
+    }
 
-      .product-summary {
-        width: 360px;
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 30px 0px;
-      }
-
-      .product-description {
-        padding: 0px 40px;
-      }
+    .product-summary {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 30px 0px;
     }
   }
 
   .product-feature {
-    padding: 0px 40px;
+    padding: 50px 0px;
 
-    >p {
+    &>p:not(:last-child) {
       margin-bottom: 33px;
     }
   }
 }
 
 // Section article
-.section-article {
-  padding: 0px 40px;
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 
-  .article-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  .artile-item {
+    width: calc(50% - 25px);
+    margin-bottom: 44px;
 
-    .artile-item {
-      width: calc(50% - 25px);
-      margin-bottom: 44px;
+    .article-thumbnail img {
+      width: 100%;
+      height: 100%;
+    }
 
-      .article-thumbnail img {
-        width: 100%;
-        height: 100%;
-      }
+    &:nth-child(odd) {
+      margin-right: 25px;
+    }
 
-      &:nth-child(odd) {
-        margin-right: 25px;
-      }
+    &:nth-child(even) {
+      margin-left: 25px;
+    }
 
-      &:nth-child(even) {
-        margin-left: 25px;
-      }
+    .article-title {
+      font-weight: bold;
+      width: 78%;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin: 22px 0px;
+    }
 
-      .article-title {
-        font-weight: bold;
-        width: 78%;
-        font-size: 2rem;
-        line-height: 2.5rem;
-        margin: 22px 0px;
-      }
-
-      .article-content {
-        line-height: 1.6;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
+    .article-content {
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 }
@@ -382,16 +367,15 @@ html {
 }
 
 .flatpickr-calendar {
-  width: 100%;
+  width: fit-content;
   background-color: transparent;
   font-family: 'Bebas Neue', cursive;
+  width: 100%;
 
   .flatpickr-rContainer,
   .flatpickr-days {
     width: 100%;
   }
-
-
 
   .flatpickr-month {
     height: unset;
@@ -411,7 +395,7 @@ html {
 
   .flatpickr-monthDropdown-months {
     background-color: black !important;
-    font-size: 8rem;
+    font-size: 10.67vw;
     text-align: center;
     padding: 0;
 
@@ -451,7 +435,7 @@ html {
     }
 
     &.today {
-      border:unset
+      border: unset
     }
 
     &.today::after {
@@ -550,5 +534,29 @@ html {
 
   .numInputWrapper {
     font-size: 3.7rem;
+  }
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 8px;
+  }
+
+  section {
+    padding: 30px 20px;
+  }
+
+  .section-top {
+    padding: 0 40px;
+  }
+
+  .image-full {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+  }
+
+  .slider-custom {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
   }
 }
